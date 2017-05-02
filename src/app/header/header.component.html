@@ -1,0 +1,27 @@
+<md-toolbar color="primary">
+    <button md-button routerLink="/"><h1>Chateau Svetlov</h1></button>
+    <span class="spacer"></span>
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+        <md-icon>more_vert</md-icon>
+    </button>
+    <md-menu #menu="mdMenu">
+        <button md-menu-item routerLink="/">
+            <md-icon>home</md-icon>
+            <span>Home</span>
+        </button>
+        <button md-menu-item routerLink="/images">
+            <md-icon>collections</md-icon>
+            <span>Pictures</span>
+        </button>
+        <button md-menu-item routerLink="/videos">
+            <md-icon>video_library</md-icon>
+            <span>Video</span>
+        </button>
+        <a href="#contacts" class="a-nostyle">
+            <button md-menu-item routerLink="/">
+                <md-icon>contact_mail</md-icon>
+                <span>Contact Us</span>
+            </button>
+        </a>
+    </md-menu>
+</md-toolbar>

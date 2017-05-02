@@ -1,0 +1,25 @@
+@import "styles.scss";
+
+@media screen and (min-width: 0px) {
+    // default html tags
+
+    // custom html tags
+    .footer-card {
+        align-items: center;
+        background-color: $card_background_color;
+        margin: 0;
+        margin-top: 15%;
+        margin-bottom: 1%;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    // default html tags
+
+    // custom html tags
+    .footer-card {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}

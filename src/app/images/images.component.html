@@ -1,0 +1,33 @@
+<button md-mini-fab id="fab-menu" [mdMenuTriggerFor]="menu">
+    <md-icon>menu</md-icon>
+</button>
+
+
+<md-menu #menu="mdMenu">
+        <button md-menu-item (click)="setImages('stage')">
+            <md-icon>star_rate</md-icon>
+            <span>Stage</span>
+        </button>
+        <button md-menu-item (click)="setImages('interior')">
+            <md-icon>border_inner</md-icon>
+            <span>Interior</span>
+        </button>
+        <button md-menu-item (click)="setImages('exterior')">
+            <md-icon>all_out</md-icon>
+            <span>Exterior</span>
+        </button>
+</md-menu>
+
+<md-card class="main-card">
+    <md-card-header>
+        <md-card-title>{{title}}</md-card-title>
+    </md-card-header>
+</md-card>
+
+<md-card class="main-card" *ngFor="let item of activeFiles; let i = index">
+    <a [href]="item">
+        <figure>
+            <img md-card-image [src]="item" alt="">
+        </figure>
+    </a>
+</md-card>
